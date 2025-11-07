@@ -1,0 +1,27 @@
+/* Q74:Find the transpose of a matrix :
+#include <stdio.h>
+int main() {
+    int rows, cols, i, j;
+    int matrix[10][10];
+    int rowSum[10];  
+    printf("Enter number of rows and columns: ");
+    scanf("%d %d", &rows, &cols);
+    printf("Enter the elements of the matrix:\n");
+    for(i = 0; i < rows; i++) {
+        for(j = 0; j < cols; j++) {
+            scanf("%d", &matrix[i][j]);
+        }
+    }
+    for(i = 0; i < rows; i++) {
+        rowSum[i] = 0;  
+        for(j = 0; j < cols; j++) {
+            rowSum[i] += matrix[i][j];
+        }
+    }
+    printf("Sum of each row:\n");
+    for(i = 0; i < rows; i++) {
+        printf("%d ", rowSum[i]);
+    }
+    printf("\n");
+    return 0;
+}
